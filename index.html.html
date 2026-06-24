@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1976d2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1976d2;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+
+        .success-msg {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        #success:target {
+            display: block;
+        }
+
+        input:invalid {
+            border-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Simple Form</h2>
+        <form action="#success">
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Idhu submit panniyum varum -->
+        <div id="success" class="success-msg">
+             Your form is submitted!
+        </div>
+    </div>
+
+</body>
+</html>
